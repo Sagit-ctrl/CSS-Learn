@@ -1,0 +1,32 @@
+/* Thuộc tính height và width CSS được sử dụng để đặt chiều cao và chiều rộng của một phần tử. */
+/* Thuộc tính CSS max-width được sử dụng để đặt chiều rộng tối đa của một phần tử. */
+
+/* Thuộc tính height và width không bao gồm phần đệm, đường viền hoặc lề. */
+/* Nó đặt height/width của vùng bên trong phần đệm, đường viền và lề của phần tử. */
+
+/* có các kiểu định dạng */
+/* 
+auto - trình duyệt sẽ tự động tính toán
+length - chính xác bằng px, pt, cm, etc.
+% - tính theo phần tử chứa nó
+inherit - kế thừa từ phần tử chứa nó (phần tử chứa nó so với phần tử mẹ của nó) 
+initial - đặt height/width với giá trị mặc định của nó   */
+
+body{
+
+    height: 200px;
+    width: 50%;
+
+}
+
+/* nếu dùng cả width và max-width mà width to hơn thì max-width sẽ đc sử dụng */
+
+box.models {
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+
+

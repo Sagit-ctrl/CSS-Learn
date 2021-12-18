@@ -1,0 +1,48 @@
+/* Tron CSS có nhiều cách chọn phần tử */
+/* 
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+*/
+
+/* Descendant selector */
+/* Chọn tất cả phần tử con cùng loại trong 1 phần tử cha */
+/* VD chọn tất cả phần tử p trong thẻ div */
+div p {
+    background-color: yellow;
+}
+
+/* Child selector */
+/* Chọn tất cả phần tử con mà không nằm trong phần tử khác của phần tử cha */
+/* 
+<div>
+<p> Child selector and Descendant selector </p>
+<section><p> not Child selector but Descendant selector</p></section>
+</div>
+*/
+div > p {
+    background-color: yellow;
+}
+
+/* Adjacent Sibling Selector */
+/* Chọn 1 phần tử nằm ngay sau 1 phần tử kế cận khác */
+/* Có cùng 1 phần tử mẹ */
+/* 
+<div>
+    <div></div>
+    <p></p>
+</div>
+*/
+div + p {
+    background-color: yellow;
+}
+
+/* General Sibling Selector */
+/* Chọn tất cả phần tử chung phần tử cha với phần tử chỉ định */
+/* tính từ sau phần tử đc chỉ định */
+div ~ p {
+    background-color: yellow;
+}
+
+

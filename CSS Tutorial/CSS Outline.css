@@ -1,0 +1,71 @@
+/* outline sẽ bao ngoài phần tử border */
+/* làm cho phần tử nổi bật hơn */
+
+outline.style{
+
+    /* dotted - dấu "."
+    dashed - dấu "-"
+    solid - vạch đơn liền nhau
+    double - vạch đôi liền
+    groove - xác định đường viền có rãnh 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
+    ridge - xác định đường viền 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
+    inset - xác định đường viền in 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
+    outset - xác định đường viền ban đầu 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
+    none - không có đường viền
+    hidden - định nghĩa 1 đường viền ẩn */
+
+    outline-style: dotted;
+
+}
+
+outline.width{
+
+    /* thin (typically 1px)
+    medium (typically 3px)
+    thick (typically 5px)
+    A specific size (in px, pt, cm, em, etc) */
+
+    outline-width: thin;
+    outline-width: 4px;
+
+}
+
+outline.color{
+
+    /* name - specify a color name, like "red"
+    HEX - specify a hex value, like "#ff0000"
+    RGB - specify a RGB value, like "rgb(255,0,0)"
+    HSL - specify a HSL value, like "hsl(0, 100%, 50%)"
+    invert - đảo ngược màu nền */
+
+    outline-color: red;
+    outline-color: #ff0000;
+    outline-color: rgb(255,0,0);
+    outline-color: hsl(0, 100%, 50%);
+    /* cái này luôn nhìn thấy bất kể màu nền */
+    outline-color: invert;
+}
+
+outline.shorthand{
+
+    /* outline-width
+    outline-style (chắc chắn phải có)
+    outline-color */
+
+    /* không quan trọng thứ tự */
+    outline: thick ridge pink;
+    outline: 5px solid yellow;
+
+}
+
+outline.offset{
+
+    /* tạo khoảng cách giữa border và outline */
+    /* khoảng trống này trong suốt */
+    outline-offset: 15px;
+
+}
+
+/* outline ko nằm trong phần tử (box element) */
+
+

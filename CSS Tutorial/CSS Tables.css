@@ -1,0 +1,78 @@
+/* table borders */
+/* tạo viền */
+table, th, td {
+    border: 1px solid black;
+}
+/* độ rộng của bảng */
+table {
+    width: 100%;
+}
+/* gộp các đươngf viền lại với nhau */
+table {
+    border-collapse: collapse;
+}
+
+/* table size */
+
+table {
+    width: 100%;
+}
+  
+th {
+    height: 70px;
+}
+
+/* table aligniment */
+/* định hướng theo chiều ngang */
+td {
+    text-align: center;
+}
+
+th {
+    text-align: left;
+}
+/* định hướng theo chiều dọc */
+td {
+    height: 50px;
+    vertical-align: bottom;
+}
+
+/* table style */
+/* padding cho bảng */
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+/* chia theo hàng ngang */
+th, td {
+    border-bottom: 1px solid #ddd;
+}
+/* highlight dòng mà con chuột lăn qua */
+tr:hover {
+    background-color: #f5f5f5;
+}
+/* highlight màu cho hàng chẵn và lẻ */
+/* even là số chẵn, odd là số lẻ */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* table color */
+/* chữ màu trắng */
+th {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Responsive Table */
+/* thanh cuộn sẽ hiện khi màn hình quá nhỏ */
+table{
+
+    overflow-x: auto;
+
+}
+
+
+
+
+

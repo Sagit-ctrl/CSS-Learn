@@ -1,0 +1,47 @@
+/* thuộc tính transform
+rotateX()
+rotateY()
+rotateZ()
+*/
+
+/* Phương thức rotateX() xoay một phần tử quanh trục X của nó ở một mức độ nhất định: */
+#myDiv {
+    transform: rotateX(150deg);
+}
+
+/* Phương thức rotateY() xoay một phần tử quanh trục Y của nó ở một mức độ nhất định: */
+#myDiv {
+    transform: rotateY(150deg);
+}
+
+/* Phương thức rotateZ() xoay một phần tử quanh trục Z của nó ở một mức độ nhất định: */
+#myDiv {
+    transform: rotateZ(150deg);
+}
+
+/* 
+transform	        Áp dụng thuộc tính 2D hoặc 3D lên phần tử
+transform-origin	Thay đổi vị trí gốc của phần tử
+transform-style	    Chỉ định các phần tử lồng nhau trong 3D
+perspective	        Chỉ định phối cảnh các phần tử trong 3D
+perspective-origin  Chỉ định phối cảnh phần tử bottom trong 3D
+backface-visibility Chỉ định phần tử có thể nhìn thấy từ phía sau
+*/
+
+/* 
+matrix3d
+(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)	Defines a 3D transformation, using a 4x4 matrix of 16 values
+translate3d(x,y,z)	                Defines a 3D translation
+translateX(x)	                    Defines a 3D translation, using only the value for the X-axis
+translateY(y)	                    Defines a 3D translation, using only the value for the Y-axis
+translateZ(z)	                    Defines a 3D translation, using only the value for the Z-axis
+scale3d(x,y,z)                  	Defines a 3D scale transformation
+scaleX(x)	                        Defines a 3D scale transformation by giving a value for the X-axis
+scaleY(y)	                        Defines a 3D scale transformation by giving a value for the Y-axis
+scaleZ(z)	                        Defines a 3D scale transformation by giving a value for the Z-axis
+rotate3d(x,y,z,angle)	            Defines a 3D rotation
+rotateX(angle)	                    Defines a 3D rotation along the X-axis
+rotateY(angle)	                    Defines a 3D rotation along the Y-axis
+rotateZ(angle)	                    Defines a 3D rotation along the Z-axis
+perspective(n)	                    Defines a perspective view for a 3D transformed element
+*/

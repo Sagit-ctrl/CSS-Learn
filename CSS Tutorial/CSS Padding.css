@@ -1,0 +1,67 @@
+/* Padding được sử dụng để tạo không gian xung quanh nội dung của phần tử, 
+bên trong bất kỳ đường viền xác định nào. */
+
+/* có thể điều khiển toàn bộ các chiều */
+
+padding.sides{
+
+    /* padding-top
+    padding-right
+    padding-bottom
+    padding-left */
+
+    /* có các kiểu định dạng */
+    /* 
+    auto - trình duyệt sẽ tự động tính toán
+    length - chính xác bằng px, pt, cm, etc.
+    % - tính theo phần tử chứa nó
+    inherit - kế thừa từ phần tử chứa nó (phần tử chứa nó so với phần tử mẹ của nó) */
+
+    /* không chấp nhận giá trị âm */
+
+    padding-top: 50px;
+    padding-right: auto;
+     padding-bottom: 20%;
+    padding-left: inherit;
+
+}
+
+padding.shorthand{
+
+    padding: 25px 50px 75px 100px;
+    /* top padding is 25px
+    right padding is 50px
+    bottom padding is 75px
+    left padding is 100px */
+
+    padding: 25px 50px 75px;
+    /* top padding is 25px
+    right and left paddings are 50px
+    bottom padding is 75px */
+
+    padding: 25px 50px;
+    /* top and bottom paddings are 25px
+    right and left paddings are 50px */
+
+    padding: 25px;
+    /* all four paddings are 25px */
+
+
+}
+
+padding.elementwidth{
+
+    /* Vùng nội dung là phần bên trong phần đệm, đường viền và lề của một phần tử (mô hình hộp). */
+    /* Vì vậy, nếu một phần tử có chiều rộng được chỉ định, 
+    phần đệm được thêm vào phần tử đó sẽ được thêm vào tổng chiều rộng của phần tử */
+
+    /* để không bị ảnh hưởng của padding đến phần tử cha */
+    box-sizing: border-box;
+
+
+}
+
+
+
+
+

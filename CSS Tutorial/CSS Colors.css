@@ -1,0 +1,45 @@
+/* màu sắc có thể gọi ra bằng tên */
+/* có thể set màu nền */
+body{
+    background-color: aqua;
+}
+
+/* có thể set màu chữ */
+body{
+    color: #000;
+}
+
+/* set màu đường viền */
+body{
+    border: 2px solid tomato;
+}
+
+/* có thể dùng nhiều thể loại tên RGB, HEX, HSLA */
+/* RGB */
+/* RGBA */
+/* rgb(red, green, blue)
+rgba(red, green, blue, alpha) */
+/* a là độ trong của màu */
+/* ------------------------------------------------------- */
+/* HEX */
+/* #rrggbb */
+/* cặp giá trị rr, gg, bb là các giá trị của các màu đỏ, xanh lá, xanh dương */
+/* nếu các cặp r=r, g=g,b=b thì chuyển dạng #rgb */
+/* ------------------------------------------------------- */
+/* HSL */
+/* hsl(hue, saturation, lightness) */
+/* Hue là một độ trên bánh xe màu từ 0 đến 360. 0 là màu đỏ, 120 là xanh lục và 240 là xanh lam. */
+/* Saturation là giá trị phần trăm, 0% có nghĩa là màu xám và 100% là màu đầy đủ. */
+/* Lightness cũng là một tỷ lệ phần trăm, 0% là màu đen, 50% là không sáng hoặc tối, 100% là màu trắng */
+/* hsla(hue, saturation, lightness, alpha) */
+/* Tham số alpha là một số từ 0,0 (hoàn toàn trong suốt) đến 1,0 (không trong suốt chút nào) */
+
+
+
+
+
+
+
+
+
+

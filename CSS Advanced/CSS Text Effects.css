@@ -1,0 +1,62 @@
+/* Các thuộc tính cơ bản
+text-overflow
+word-wrap
+word-break
+writing-mode
+*/
+
+/* Thuộc tính text-overflow CSS chỉ định cách báo hiệu nội dung bị tràn 
+không được hiển thị cho người dùng. */
+/* Các giá trị 
+clip : cắt nhưng ko hiển thị dấu hiệu
+ellipsis : cắt có dấu hiệu
+*/
+p.test1 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: clip;
+}
+p.test2 {
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* để phần tràn hiển thị lại */
+div.test:hover {
+    overflow: visible;
+}
+
+/* Thuộc tính CSS word-wrap cho phép các từ dài có thể được ngắt 
+và quấn vào dòng tiếp theo. */
+p {
+    word-wrap: break-word;
+}
+
+/* Thuộc tính word-break trong CSS chỉ định các quy tắc ngắt dòng. */
+p.test1 {
+    word-break: keep-all;
+}
+p.test2 {
+    word-break: break-all;
+}
+
+/* Thuộc tính writing-mode CSS chỉ định liệu các dòng văn bản được bố trí 
+theo chiều ngang hay chiều dọc. */
+p.test1 {
+    writing-mode: horizontal-tb;
+}
+span.test2 {
+    writing-mode: vertical-rl;
+}
+p.test2 {
+    writing-mode: vertical-rl;
+}
+
+/* 
+text-align-last	    Specifies how to align the last line of a text
+text-justify	    Specifies how justified text should be aligned and spaced
+*/

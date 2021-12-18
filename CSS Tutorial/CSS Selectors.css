@@ -1,0 +1,76 @@
+/* CSS có 5 phương án để chọn phần tử */
+
+/* --------------------------------------------------------- */
+/* --------------------------------------------------------- */
+/* Chọn bình thường: dùng name, id, class */
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Chọn dựa vào element, tất cả các element sẽ cùng 1 kiểu */
+p {
+    text-align: center;
+    color: red;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Chọn dựa vào ID */
+/* Cái này dùng để chỉ đích danh 1 phần tử cụ thể */
+/* id ko bắt đầu bằng số */
+/* id="para1" */
+#para1 {
+    text-align: center;
+    color: red;
+}
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Chọn dựa vào class */
+/* Cái này chọn một nhóm các phần tử có cùng class */
+/* class="center" */
+.center {
+    text-align: center;
+    color: red;
+}
+/* tất cả các phần tử p có class="center" sẽ chịu ảnh hưởng */
+p.center {
+    text-align: center;
+    color: red;
+}
+/* 1 phần tử có thể bị ảnh hưởng bởi nhiều class */
+/* -------------------------------------------------------- */
+/* Chọn dựa vào mối quan hệ giữa các phần tử*/
+/* dấu * lựa chọn toàn bộ phần tử trong document */
+* {
+    text-align: center;
+    color: blue;
+}
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* chọn nhóm */
+h1 {
+    text-align: center;
+    color: red;
+}
+h2 {
+    text-align: center;
+    color: red;
+}
+p {
+    text-align: center;
+    color: red;
+}
+h1, h2, p {
+    text-align: center;
+    color: red;
+}
+/* -------------------------------------------------------- */
+/* Chọn phần tử dựa trên một trạng thái nhất định */
+
+/* Chọn và tạo kiểu cho một phần của phần tử */
+
+/* Chọn dựa vào thuộc tính hoặc giá trị thuộc tính */
+
+
+
+
+
+
+
+
+
+
+

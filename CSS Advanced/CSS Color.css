@@ -1,0 +1,108 @@
+/* 3 thuộc tính của color 
+transparent
+currentcolor
+inherit
+*/
+
+/* Gradient */
+/* Có 2 kiểu gradient
+Linear Gradient (tuyến tính) : lên xuống trái phải chéo
+Radial Gradient (hình tròn) : phụ thuộc vào vị trí tâm
+*/
+
+/* Linear Gradient */
+.syntax {
+    background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+}
+/* direction là chiều */
+#grad {
+    background-image: linear-gradient(to bottom right, red, yellow);
+}
+/* hoặc dùng angle để điều chỉnh chiều, top ứng với 0deg */
+#grad {
+    background-image: linear-gradient(180deg, red, yellow, green);
+}
+/* Gradient mờ dần */
+#grad {
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+}
+/* repeat */
+#grad {
+    background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+
+
+/* Radial Gradient */
+.syntax{
+    background-image: radial-gradient(shape size at position, start-color,..., last-color);
+}
+#grad {
+    background-image: radial-gradient(red, yellow, green);
+}
+/* thay đổi điểm chuyển giao màu */
+#grad {
+    background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+}
+/* thay đổi hình dạng circle hoặc elipse */
+#grad {
+    background-image: radial-gradient(circle, red, yellow, green);
+}
+/* Có nhiều kiểu tham số kích thước
+closest-side
+farthest-side
+closest-corner
+farthest-corner
+*/
+#grad1 {
+    background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+}
+#grad2 {
+    background-image: radial-gradient(farthest-side at 60% 55%, red, yellow, black);
+}
+/* repeat */
+#grad {
+    background-image: repeating-radial-gradient(red, yellow 10%, green 15%);
+}
+
+/* Shadow Effects */
+/* 2 thuộc tính chính
+box-shadow
+text-shadow
+*/
+
+/* text-shadow */
+/* Ở VD sau
+Chữ màu trắng, bóng hạ xuống 2px, sang phải 2px, blur 4px, màu bóng là đen
+*/
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+/* nếu 0 0 3px #FF0000 sẽ tạo ra màu neon đỏ */
+/* có thể tạo ra nhiều hiệu ứng chồng nhau */
+h1 {
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+/* cũng có thể dùng để tạo border cho chữ */
+h1 {
+    color: yellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* box-shadow */
+h1 {
+    box-shadow: 2px 2px 4px #000000;
+}
+/* Creat card */
+div.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+
+
+
+
+

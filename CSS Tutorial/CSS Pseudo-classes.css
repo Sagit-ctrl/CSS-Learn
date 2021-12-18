@@ -1,0 +1,99 @@
+/* lớp giả tạo ra thay đổi trạng thái trên phần tử */
+/* cú pháp (syntax) */
+selector:pseudo-class {
+    property: value;
+}
+
+/* đối với 1 link sẽ có 4 trạng thái */
+/* thứ tự như sau */
+/* link chưa vào lần nào */
+a:link {
+    color: #FF0000;
+}
+/* link đã vào ít nhất 1 lần */
+a:visited {
+    color: #00FF00;
+}
+/* di chuột vào */
+a:hover {
+    color: #FF00FF;
+}
+/* link đang hoạt động, link được chọn */
+a:active {
+    color: #0000FF;
+}
+
+/* lớp giả có thể kết hợp vào cách chọn CSS bth */
+a.highlight:hover {
+    color: #ff0000;
+}
+
+/* lớp giả có thể dùng cho các hiệu ứng show thêm */
+/* như vd sau phần tử p sẽ hiện ra khi di chuột vào */
+/* cái này hay dùng cho gợi ý hoặc giải nghĩa */
+p {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+div:hover p {
+    display: block;
+}
+
+/* chỉ định phần tử con đầu tiên của phần tử được chọn dùng lớp giả :first-child */
+/* như vd phần tử p là phần tử con đầu tiên của mọi phần tử khác sẽ đc chọn */
+p:first-child {
+    color: blue;
+}
+/* vd sau mọi phần tử i đầu tiên là phần tử con của p được chọn */
+p i:first-child {
+    color: blue;
+}
+/* vd sau chọn tất cả phần tử i của phần tử p đầu tiên trong phần tử cha */
+p:first-child i {
+    color: blue;
+}
+
+/* :lang cho phép xây dựng quy tắc đặc biệt cho các phần tử khác */
+/* vd sau cho thấy thay vì quote là dấu "" thì sẽ là ~~ */
+q:lang(no) {
+    quotes: "~" "~";
+}
+/* <q lang="no">A quote in a paragraph</q> */
+
+/* Các lớp giả khác */
+/* Xem ảnh Pseudo-classes */
+/* 
+:active	                a:active	            Chọn các link đang chạy
+:checked	            input:checked	        Chọn các thẻ input đã được kiểm tra
+:disabled	            input:disabled	        Chọn các thẻ input bị vô hiệu hóa
+:empty	                p:empty	                Chọn các thẻ p mà không có phần tử con
+:enabled	            input:enabled	        Chọn các thẻ input có thể hoạt động
+:first-child	        p:first-child	        Chọn các thẻ p là thẻ con đầu tiên của phần tử khác
+:first-of-type      	p:first-of-type	        Chọn các thẻ p là thẻ p đầu tiên của phần tử khác
+:focus	                input:focus	            Chọn các thẻ input đang được focus vào
+:hover	                a:hover	                Chọn các link đang được di chuột vào
+:in-range	            input:in-range      	Chọn các thẻ input có giá trị trong phạm vi được chỉ định
+:invalid	            input:invalid	        Chọn các thẻ input có giá trị không xác định, sai kiểu
+:lang(language)      	p:lang(it)          	Chọn các thẻ p mà thuộc tính lang bắt đầu với "it"
+:last-child	            p:last-child	        Chọn các thẻ p là phần tử con cuối cùng trong phần tử cha
+:last-of-type	        p:last-of-type	        Chọn các thẻ p là phần tử p cuối cùng trong phần tử lớn
+:link	                a:link	                Chọn tất cả các link chưa vào
+:not(selector)      	:not(p)	                Chọn tất cả thẻ không phải thẻ p
+:nth-child(n)	        p:nth-child(2)	        Chọn tất cả thẻ p là thẻ con thứ 2 trong phần tử cha
+:nth-last-child(n)	    p:nth-last-child(2)	    Chọn tất cả thẻ p là thẻ con thứ 2 từ dưới lên trong phần tử cha
+:nth-last-of-type(n)	p:nth-last-of-type(2)	Chọn tất cả thẻ p là thẻ loại p thứ 2 trong phần tử cha từ dưới lên
+:nth-of-type(n)	        p:nth-of-type(2)	    Chọn tất cả thẻ p là thẻ loại p thứ 2 trong phần tử cha
+:only-of-type	        p:only-of-type	        Chọn các thẻ p là thẻ p duy nhất trong phần tử cha
+:only-child	            p:only-child	        Chọn các thẻ p là thẻ con duy nhất trong phần tử cha
+:optional	            input:optional	        Chọn các thẻ input mà không có thuộc tính required
+:out-of-range	        input:out-of-range	    Chọn các thẻ input có giá trị ngoài khoảng cho phép
+:read-only	            input:read-only	        Chọn các thẻ input có thuộc tính readonly
+:read-write	            input:read-write	    Chọn các thẻ input không có thuộc tính readonly
+:required	            input:required	        Chọn các thẻ input có thuộc tính required
+:root	                root	                Chọn các phần tử gốc của tài liệu (body)
+:target	                #news:target	        Chọn các phần tử đang họat động
+:valid	                input:valid	            Chọn các thẻ input với giá trị phù hợp
+:visited	            a:visited	            Chọn tất cả các link đã vào
+ */
+

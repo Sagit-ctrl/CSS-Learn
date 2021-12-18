@@ -1,0 +1,91 @@
+/* Margin được sử dụng để tạo không gian xung quanh các phần tử, 
+bên ngoài bất kỳ đường viền xác định nào. */
+
+/* có thể control mọi hướng */
+
+margin.sides{
+
+    /* có thể gọi cả 4 hướng */
+    /* margin-top
+    margin-right
+    margin-bottom
+    margin-left */
+
+    /* có các kiểu định dạng */
+    /* 
+    auto - trình duyệt sẽ tự động tính toán
+    length - chính xác bằng px, pt, cm, etc.
+    % - tính theo phần tử chứa nó
+    inherit - kế thừa từ phần tử chứa nó (phần tử chứa nó so với phần tử mẹ của nó) */
+
+    /* có thể chấp nhận giá trị âm */
+
+    margin-top: 100px;
+    margin-bottom: auto;
+    margin-right: 30%;
+    margin-left: inherit;
+
+}
+
+margin.shorthand{
+
+    margin: 25px 50px 75px 100px;
+    /* top 25px; right 50px; bottom 75px; left 100px; */
+
+    margin: 25px 50px 75px;
+    /* top 25px; right and left 50px; bottom 75px; */
+
+    margin: 25px 50px;
+    /* top and bottom 25px; right and left 50px; */
+
+    margin: 25px;
+    /* all 25px; */
+
+}
+
+margin.auto{
+
+    /* nó tự tính toán căn giữa theo chiều ngang cái chứa nó */
+    /* nội dung ở giữa, khoảng trắng tự chia cho bên trái và bên phải */
+    margin: auto;
+
+}
+
+/* 
+<div>
+    <p class="margin.inherit"></p>
+</div>
+ */
+
+div {
+    border: 1px solid red;
+    margin-left: 100px;
+  }
+
+margin.inherit{
+
+    /* nó sẽ kế thừa từ phần tử cha của nó */
+    margin: inherit;
+}
+
+h1{
+    margin: 0 0 50px 0;
+}
+
+h2{
+    margin: 20px 0 0 0;
+}
+
+margin.collapse{
+
+    margin: 20px 0 50px 0;
+
+}
+
+
+
+
+
+
+
+

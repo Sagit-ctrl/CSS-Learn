@@ -1,0 +1,103 @@
+/* CSS có rất nhiều thuộc tính để định dạng văn bản. */
+
+text.color{
+
+    /* a color name - like "red"
+    a HEX value - like "#ff0000"
+    an RGB value - like "rgb(255,0,0)" */
+
+    color: blue;
+
+    /* nên xác định cả thuộc tính màu nền */
+    /* ưu tiên dùng color của phần tử */
+    /* nên set cả color cho cả background */
+
+}
+
+text.align{
+
+    /* Thuộc tính text-align được sử dụng để đặt căn lề ngang của văn bản. */
+    /* Văn bản có thể được căn trái hoặc phải, căn giữa hoặc căn đều. */
+
+    /* center : trung tâm
+    right : phải
+    left : trái
+    justify : căn đều */
+
+    text-align: center;
+
+    /* Khi thuộc tính text-align được đặt thành "justify", 
+    mỗi dòng được kéo dài để mọi dòng có chiều rộng bằng nhau 
+    và các lề trái và phải đều thẳng (giống như trong tạp chí và báo): */
+}
+
+text.direction{
+
+    /* thay đổi hướng của văn bản */
+    /* chiều từ phải sang trái rtl, trái qua phải ltr */
+    direction: rtl;
+    unicode-bidi: bidi-override;
+
+}
+
+text.vertical{
+
+    vertical-align: middle;
+
+    /* top, middle, bottom */
+}
+
+text.decoration{
+
+    /* thường dùng để set hoặc xóa trang trí khỏi text */
+    /* thường để là none để xóa đấu gạch dưới links */
+    text-decoration: none;
+
+    /* overline, line-through, underline */
+}
+
+text.transformation{
+
+    /* dùng để thay đổi chữ hoa chữ thường trong văn bản */
+    text-transform: none;
+
+    /* uppercase, lowercase, capitalize: viết hoa chữ đầu tiên */
+
+}
+
+text.spacing{
+
+    /* Thuộc tính text-indent được sử dụng để chỉ định thụt lề của dòng đầu tiên của văn bản: */
+    text-indent: 50px;
+
+    /* Thuộc tính khoảng cách giữa các ký tự được sử dụng để chỉ định khoảng cách giữa các ký tự trong văn bản. */
+    letter-spacing: 3px;
+
+    /* Thuộc tính line-height được sử dụng để chỉ định khoảng cách giữa các dòng: */
+    line-height: 0.8;
+
+    /* Thuộc tính word-spacing được sử dụng để xác định khoảng cách giữa các từ trong văn bản. */
+    word-spacing: 10px;
+
+    /* Thuộc tính white-space chỉ định cách xử lý khoảng trắng bên trong một phần tử. */
+    white-space: nowrap;
+
+}
+
+text.shadow{
+
+    /* tạo đổ bóng cho văn bản */
+    /* ngang -> dọc */
+    text-shadow: 2px 2px;
+
+    /* thêm màu */
+    text-shadow: 2px 2px red;
+
+    /* tạo thêm hiệu ứng blur 5px */
+    text-shadow: 2px 2px 5px red;
+
+
+}
+
+
+

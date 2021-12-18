@@ -1,0 +1,24 @@
+/* An image as a border! */
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.png) 30 round;
+}
+
+/* Làm phồng xẹp đường viền */
+#borderimg {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.png) 30 stretch;
+}
+
+/* Border-image có những thuộc tính
+border-image-source             Chọn 1 ảnh coi nó như viền
+border-image-slice              Xác định phần trăm bị cắt xén của viền
+border-image-width              Độ rộng của viền
+border-image-outset             Xác định độ rộng của ảnh lòi ra ngoài đường viền
+border-image-repeat             Xác định số lần lặp của ảnh
+*/
+
+
+

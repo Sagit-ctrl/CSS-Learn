@@ -1,0 +1,60 @@
+/* 
+background-size
+background-origin
+background-clip
+*/
+
+#example1 {
+    background-image: url(img_flwr.gif), url(paper.gif);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+}
+
+/* background-size */
+#div1 {
+    background: url(img_flower.jpg);
+    background-size: 100px 80px;
+    background-repeat: no-repeat;
+}
+/* từ khóa contain sẽ phóng to hình hết cỡ để phủ n vẫn giữ tỉ lệ hình, có thể 1 số phần ko phủ đc */
+/* từ khóa cover sẽ phủ hết màn hình nhưng có thể bị mất chi tiết */
+/* background-size cũng có thể dùng multi background */
+#example1 {
+    background: url(img_tree.gif) left top no-repeat
+        , url(img_flwr.gif) right bottom no-repeat, url(paper.gif) left top repeat;
+    background-size: 50px, 130px, auto;
+}
+/* để hình luôn phủ hết màn hình */
+html {
+    background: url(img_man.jpg) no-repeat center fixed;
+    background-size: cover;
+}
+
+/* background-origin */
+/* 
+border-box : Ảnh nền bắt đầu từ góc trên bên trái của border
+padding-box : Ảnh nền bắt đầu từ góc trên bên trái của cạnh padding
+content-box : Ảnh nền bắt đầu từ góc trên bên trái của content
+*/
+#example1 {
+    border: 10px solid black;
+    padding: 35px;
+    background: url(img_flwr.gif);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+}
+
+/* background-clip */
+/* 
+border-box : background được vẽ từ ngoài cạnh của border
+padding-box : background được vẽ từ ngoài cạnh của padding
+content-box : background được vẽ bên trong content
+*/
+#example1 {
+    border: 10px dotted black;
+    padding: 35px;
+    background: yellow;
+    background-clip: content-box;
+}
+
+

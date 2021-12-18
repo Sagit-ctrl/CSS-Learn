@@ -1,0 +1,68 @@
+/* thuộc tính transform */
+/* 
+translate()
+rotate()
+scaleX()
+scaleY()
+scale()
+skewX()
+skewY()
+skew()
+matrix()
+*/
+
+/* Phương thức translate() di chuyển một phần tử khỏi vị trí hiện tại của nó 
+(theo các tham số cho trục X và trục Y). */
+div {
+    transform: translate(50px, 100px);
+}
+
+/* Phương thức rotate() quay một phần tử theo chiều kim đồng hồ hoặc 
+ngược chiều kim đồng hồ theo một mức độ nhất định. */
+div {
+    transform: rotate(20deg);
+    /* chiều kim đồng hồ */
+}
+
+/* Phương thức scale() tăng hoặc giảm kích thước của một phần tử 
+(theo các tham số cho chiều rộng và chiều cao). */
+div {
+    transform: scale(2, 3);
+}
+
+/* Phương thức scaleX() tăng hoặc giảm chiều rộng của một phần tử. */
+div {
+    transform: scaleX(2);
+}
+
+/* Phương thức scaleY() tăng hoặc giảm chiều cao của một phần tử. */
+div {
+    transform: scaleY(3);
+}
+
+/* Phương thức skewX() xiên một phần tử dọc theo trục X một góc cho trước. */
+div {
+    transform: skewX(20deg);
+}
+
+/* Phương thức skewY() xiên một phần tử dọc theo trục Y một góc cho trước. */
+div {
+    transform: skewY(20deg);
+}
+
+/* Phương thức skew() xiên một phần tử dọc theo trục X và trục Y một góc cho trước. */
+div {
+    transform: skew(20deg, 10deg);
+}
+div {
+    transform: skew(20deg);
+    /* sẽ xiên theo trục X */
+}
+
+/* Phương thức matrix() kết hợp tất cả các phương thức biến đổi 2D thành một. */
+/* matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) */
+div {
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+
+/* transform-origin       Thay đổi điểm gốc của phần tử */

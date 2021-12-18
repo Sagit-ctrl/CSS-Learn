@@ -1,0 +1,74 @@
+/* dùng để tạo hiệu ứng cho backgrounds */
+
+body{
+
+    /* Thuộc tính background-color chỉ định màu nền của một phần tử. */
+    /* thuộc tính này hầu như thẻ nào cũng dùng đc */
+    background-color: lightblue;
+
+    /* Thuộc tính opacity chỉ định độ mờ đục/trong suốt của một phần tử. 
+    Nó có thể nhận giá trị từ 0,0 - 1,0.
+    Giá trị càng thấp, càng trong suốt */
+    /* các phần tử con cũng bị ảnh hưởng bởi cái này */
+    opacity: 0.3;
+
+    /* nếu ko muốn bị ảnh hưởng đến phần tử con thì dùng RGBA */
+    background: rgba(0, 128, 0, 0.3)
+
+
+}
+
+background.image{
+    /* có thể sử dụng ảnh là background */
+    /* theo mặc định nó sẽ lặp đi lặp lại ảnh để bao phủ toàn bộ màn hình */
+    background-image: url("paper.gif");
+
+    /* khi dùng ảnh nên chọn ảnh dễ đọc tránh gây xao nhãng cho ng đọc */
+
+}
+
+background.repeat{
+
+    /* để lặp lại theo chiều ngang  */
+    background-image: url("gradient_bg.png");
+    background-repeat: repeat-x;
+
+    /* để lặp lại theo chiều dọc */
+    background-repeat: repeat-y;
+
+    /* để không lặp lại */
+    background-repeat: no-repeat;
+
+}
+
+background.position{
+
+    /* Thuộc tính background-position được sử dụng để chỉ định vị trí của hình nền */
+    background-position: right top;
+
+}
+
+background.attachment{
+
+    /* chọn việc màn hình được cuộn hoặc cố định */
+    background-attachment: fixed;
+    /* background-attachment: scroll; */
+
+}
+
+background.shorthand{
+
+    /* để nhanh hơn ta qui định tất cả thuộc tính trên vào 1 cái duy nhất */
+    background: #ffffff url("img_tree.png") no-repeat right top scroll;
+    /* thứ tự của các thuộc tính */
+    /* background-color
+    background-image
+    background-repeat
+    background-attachment
+    background-position */
+    /* các thuộc tính có thể thiếu nhưng cứ đúng thứ tự là đc */
+    
+}
+
+
+

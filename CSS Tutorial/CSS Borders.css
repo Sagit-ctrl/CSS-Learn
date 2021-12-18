@@ -1,0 +1,122 @@
+/* thuộc tính border cho phép định kiểu, màu, độ lớn */
+
+border.style{
+
+    /* dotted - dấu "."
+    dashed - dấu "-"
+    solid - vạch đơn liền nhau
+    double - vạch đôi liền
+    groove - xác định đường viền có rãnh 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
+    ridge - xác định đường viền 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
+    inset - xác định đường viền in 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
+    outset - xác định đường viền ban đầu 3D. Hiệu ứng phụ thuộc vào giá trị màu viền
+    none - không có đường viền
+    hidden - định nghĩa 1 đường viền ẩn */
+
+    border-style: dotted;
+
+    /* 1 border có thể có 4 kiểu viền cho trên dưới trái phải */
+
+    border-style: dotted dashed solid double;
+
+}
+
+border.width{
+
+    /* có thể đặt 1 kích thước cụ thể */
+    /* các đơn vị: in, px, pt, cm, em, etc) */
+    /* có thể dùng độ lớn kiểu thick, medium, thin*/
+
+    border-width: 2px;
+
+    /* có thể có 4 giá trị */
+    border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */
+    border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and 35px left */
+
+}
+
+border.color{
+
+    /* có thể gọi màu bằng 4 cách name, HEX, RGB, HSL, độ mờ đục */
+    /* nếu ko có màu thì sẽ kế thừa từ phần tử mà nó bao quanh*/
+
+    border-color: blue;
+
+    /* có thể chọn 4 màu 4 cạnh */
+    border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+
+    /* HEX */
+    border-color: #ff0000; /* red */
+
+    /* RGB */
+    border-color: rgb(255, 0, 0); /* red */
+
+    /* HSL */
+    border-color: hsl(0, 100%, 50%); /* red */
+
+}
+
+border.sides{
+
+    /* setup cho mỗi cạnh */
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+
+    /* 
+    If the border-style property has four values:
+    border-style: dotted solid double dashed;
+    top border is dotted
+    right border is solid
+    bottom border is double
+    left border is dashed
+
+    If the border-style property has three values:
+    border-style: dotted solid double;
+    top border is dotted
+    right and left borders are solid
+    bottom border is double
+
+    If the border-style property has two values:
+    border-style: dotted solid;
+    top and bottom borders are dotted
+    right and left borders are solid
+
+    If the border-style property has one value:
+    border-style: dotted;
+    all four borders are dotted */
+
+}
+
+border.shorthand{
+
+    /* dùng để viết nhanh hơn */
+    border: 5px solid red;
+
+    /* thứ tự trong câu lệnh ngắn */
+    /* border-width
+    border-style (bắt buộc)
+    border-color */
+
+    /* cũng có thể set cho mỗi cạnh */
+    border-left: 6px solid red;
+    border-bottom: 6px solid red;
+    border-top: 6px solid red;
+    border-right:6px solid red;
+
+}
+
+border.rounded{
+
+    /* bo tròn viền */
+    border-radius: 5px;
+
+}
+
+
+
+
+
+
+

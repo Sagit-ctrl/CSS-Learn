@@ -1,0 +1,84 @@
+/* nên thêm một danh sách các "phông chữ dự phòng" tương tự trong thuộc tính font-family.
+ Nếu phông chữ đầu tiên không hoạt động, trình duyệt sẽ thử phông chữ tiếp theo và 
+ phông chữ tiếp theo, v.v. Luôn kết thúc danh sách bằng họ phông chữ chung. */
+
+
+font.safe{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+font.style{
+
+    /* normal - The text is shown normally
+    italic - The text is shown in italics
+    oblique - The text is "leaning"  */
+
+    font-style: normal;
+
+}
+
+font.weight{
+
+    /* Thuộc tính font-weight chỉ định trọng lượng của phông chữ */
+    font-weight: bold;
+
+}
+
+font.variant{
+
+    /* chuyển các chữ thành chữ hoa nhưng nhỏ hơn */
+    font-variant: normal;
+}
+
+font.size{
+
+    /* nếu ko cài font-size sẽ mặc định là 16px/1em */
+    font-size: 40px;
+    /* Nếu bạn sử dụng pixel, bạn vẫn có thể sử dụng công cụ thu phóng để thay đổi kích thước toàn bộ trang. */
+
+    /* để thay đổi phông chữ cố định nên dùng em */
+    font-size: 2.5em; /* 40px/16=2.5em */
+
+    /* dựa vào phần tử chứa */
+    font-size: 100%;
+
+    /* dựa vào màn hình sẽ dùng đơn vị vw: viewport width */
+    font-size:10vw;
+
+}
+
+font.gg{
+
+    /* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> */
+    font-family: "Sofia", sans-serif;
+    /* dùng dễ gây lag trang web */
+
+    /* tải font kèm theo effect */
+    /* <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple"> */
+    /* <h1 class="font-effect-neon">Neon Effect</h1> */
+
+}
+
+font.shorthand{
+
+    /* font-style
+    font-variant
+    font-weight
+    font-size/line-height
+    font-family */
+
+    /* Kích thước phông chữ và các giá trị phông chữ-họ là bắt buộc. 
+    Nếu thiếu một trong các giá trị khác, giá trị mặc định của chúng sẽ được sử dụng. */
+
+    font: italic small-caps bold 12px/30px Georgia, serif;
+    
+}
+
+
+
+
+
+
+

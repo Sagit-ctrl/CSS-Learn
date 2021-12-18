@@ -1,0 +1,67 @@
+ul.a {
+    list-style-type: circle;
+}
+  
+ul.b {
+    list-style-type: square;
+}
+  
+ol.c {
+    list-style-type: upper-roman;
+}
+  
+ol.d {
+    list-style-type: lower-alpha;
+}
+
+ul {
+    list-style-image: url('sqpurple.gif');
+}
+
+/* "list-style-position: outside;" nghĩa là các dấu đầu dòng sẽ nằm ngoài mục danh sách.
+ Đầu mỗi dòng của một mục danh sách sẽ được căn chỉnh theo chiều dọc */
+
+ /* "list-style-position: inside;" nghĩa là các dấu đầu dòng sẽ nằm bên trong mục danh sách.
+ Vì nó là một phần của mục danh sách, nó sẽ là một phần của văn bản và đẩy văn bản vào đầu: */
+
+ul.a {
+    list-style-position: outside;
+}
+  
+ul.b {
+    list-style-position: inside;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+list.shorthand{
+
+    list-style: square inside url("sqpurple.gif");
+
+}
+
+/* cài đặt màu nền */
+ol {
+    background: #ff9999;
+    padding: 20px;
+}
+  
+ul {
+    background: #3399ff;
+    padding: 20px;
+}
+  
+ol li {
+    background: #ffe5e5;
+    padding: 5px;
+    margin-left: 35px;
+}
+  
+ul li {
+    background: #cce5ff;
+    margin: 5px;
+}

@@ -1,0 +1,87 @@
+/* CSS cho phép tạo hoạt ảnh cho các phần tử HTML mà không cần sử dụng JavaScript hoặc Flash! */
+
+/* 
+@keyframes
+animation-name
+animation-duration
+animation-delay
+animation-iteration-count
+animation-direction
+animation-timing-function
+animation-fill-mode
+animation
+*/
+
+/* Để sử dụng hoạt ảnh CSS, trước tiên bạn phải chỉ định một số keyframes cho hoạt ảnh. */
+/* keyframes giữ kiểu dáng mà phần tử sẽ có tại một số thời điểm nhất định. */
+/* The animation code */
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+@keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+/* The element to apply the animation to */
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    /* bắt buộc phải có animation-duration */
+    animation-delay: 2s;
+    /* tạo thời gian delay trc khi chạy animation */
+    /* nếu thời gian âm thì nó sẽ chạy như thể nó đã chạy rồi */
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+    /* đếm số lần animation chạy */
+}
+
+/* animation-direction
+normal            - The animation is played as normal (forwards). This is default
+reverse           - The animation is played in reverse direction (backwards)
+alternate         - The animation is played forwards first, then backwards
+alternate-reverse - The animation is played backwards first, then forwards
+*/
+
+/* animation-timing-function
+ease                    - Specifies an animation with a slow start, then fast, then end slowly (this is default)
+linear                  - Specifies an animation with the same speed from start to end
+ease-in                 - Specifies an animation with a slow start
+ease-out                - Specifies an animation with a slow end
+ease-in-out             - Specifies an animation with a slow start and end
+cubic-bezier(n,n,n,n)   - Lets you define your own values in a cubic-bezier function
+*/
+
+/* animation-fill-mode : Chỉ định kiểu nếu animation ko chạy (trước, sau, cả hai)
+none        Không có gì cả
+forwards    Phần tử sẽ giữ lại các giá trị kiểu được đặt bởi khung hình chính cuối cùng (phụ thuộc vào hướng hoạt ảnh và số lần lặp lại hoạt ảnh)
+backwards   Phần tử sẽ nhận các giá trị kiểu được đặt bởi khung hình chính đầu tiên (phụ thuộc vào hướng hoạt ảnh) và giữ lại giá trị này trong khoảng thời gian trễ hoạt ảnh
+both        Hoạt ảnh sẽ tuân theo các quy tắc cho cả tiến và lùi, mở rộng các thuộc tính hoạt ảnh theo cả hai hướng
+*/
+
+/* các viết ngắn gọn */
+div {
+    animation-name: example;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+div {
+    animation: example 5s linear 2s infinite alternate;
+}
+
+

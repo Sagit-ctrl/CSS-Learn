@@ -1,0 +1,45 @@
+/* Ví dụ sau chọn tất cả <a> phần tử có thuộc tính target */
+a[target] {
+    background-color: yellow;
+}
+
+/* Ví dụ sau chọn tất cả <a> phần tử có thuộc tính target = "_ blank" */
+a[target="_blank"] {
+    background-color: yellow;
+}
+
+/* Ví dụ sau đây chọn tất cả các phần tử có thuộc tính title chứa danh sách 
+các từ được phân tách bằng dấu cách, một trong số đó là "flower": */
+[title~="flower"] {
+    border: 5px solid yellow;
+}
+/* Ví dụ trên sẽ so khớp các phần tử với title = "flower", title = "summer flower" và 
+title = "new flower", chứ không phải title = "my-flower" hoặc title = "flowers". */
+
+/* Ví dụ sau chọn tất cả các phần tử có giá trị thuộc tính class bắt đầu bằng "top": */
+/* Giá trị phải là một từ toàn bộ, một mình, như class = "top" hoặc theo sau là dấu gạch ngang (-), như class = "top-text"! */
+[class|="top"] {
+    background: yellow;
+}
+
+/* Ví dụ sau chọn tất cả các phần tử có giá trị thuộc tính class bắt đầu bằng "top" */
+/* topcontents */
+[class^="top"] {
+    background: yellow;
+}
+
+/* Ví dụ sau chọn tất cả các phần tử có giá trị thuộc tính class kết thúc bằng "test": */
+[class$="test"] {
+    background: yellow;
+}
+
+/* Ví dụ sau chọn tất cả các phần tử có giá trị thuộc tính class có chứa "te": */
+[class*="te"] {
+    background: yellow;
+}
+
+
+
+
+
+

@@ -1,0 +1,346 @@
+/* Thuộc tính display là thuộc tính CSS quan trọng nhất để kiểm soát bố cục. */
+
+/* Giá trị hiển thị mặc định cho hầu hết các phần tử là block hoặc inline. */
+
+/* Một phần tử cấp block luôn bắt đầu trên một dòng mới và 
+chiếm toàn bộ chiều rộng có sẵn (trải dài sang trái và phải hết mức có thể). */
+
+/* Một phần tử inline không bắt đầu trên một dòng mới và 
+chỉ chiếm nhiều chiều rộng khi cần thiết. */
+
+/* none làm cho phần tử ko hiển thị */
+displayJS{
+    display: none;
+}
+
+/* có thể sửa loại thuộc tính của phần tử */
+/* chỉ thay đổi cách hiển thị chứ ko thay đổi loại phần tử */
+li {
+    display: inline;
+}
+span {
+    display: block;
+}
+a {
+    display: block;
+}
+/* để làm ẩn phần tử có thể thay display:none thành visibility:hidden */
+h1.hidden {
+    visibility: hidden;
+}
+
+/* có thể thay đổi đc size */
+div.ex1 {
+    width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+}
+  
+div.ex2 {
+    max-width: 500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* thuộc tính vị trí */
+/* có 5 phương pháp định vị */
+        /* static
+        relative
+        fixed
+        absolute
+        sticky */
+/* các thuộc tính top right bottom left ko hoạt động nếu chưa có thuộc tính vị trí */
+
+/* position: static; */
+/* đây là thuộc tính mặc định */
+/* các phần tử được định vị tĩnh thì ko bị ảnh hưởng bởi thuộc tính top bottom right left */
+div.static {
+    position: static;
+    border: 3px solid #73AD21;
+}
+
+/* position: relative; */
+/* phần tử được so sánh với vị trí bình thường của nó */
+/* các thuộc tính trbl sẽ điều chỉnh phần tử khỏi vị trí bth của nó */
+/* các nội dung khác sẽ không được điều chỉnh để phù hợp với bất kì khoảng trống nào do phần tử để lại */
+div.relative {
+    position: relative;
+    left: 30px;
+    border: 3px solid #73AD21;
+}
+
+/* position: fixed; */
+/* nó nằm cố định ở 1 chỗ kể cả trang web di chuyển */
+/* các thuộc tính trbl định vị phần tử đó */
+/* nó ko để lại khoảng trống ở trên trang mà nó thuường được đặt */
+/* mặc định là góc dưới bên phải của trang */
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+
+/* position: absolute; */
+/* được định vị tương đối với phần tử cha */
+/* nếu phần tử cha ko đc định vị nó sẽ dùng phần thân tài liệu và di chuyển cùng với việc cuộn trang */
+/* phần tử đc định vị là phần tử không có static */
+div.relative {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+}
+div.absolute {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    border: 3px solid #73AD21;
+}
+
+/* position: sticky; */
+/* được định vị bởi vị trí cuộn chuột của ng dùng */
+/* nó được có 1 vị trí tương đối đến khi tìm đc chỗ rồi dính vào như fixed */
+/* kiểu cuộn trang cho nó lên trên cùng nos sẽ bị kẹt lại */
+div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+}
+
+/* các phần tử chồng chéo nhau */
+/* z-index định nghĩa cái gì nằm trc cái gì nằm sau */
+/* cái này âm dương tùy ý */
+/* âm nằm trên dương nằm dưới */
+img {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* thuộc tính overflow điều khiển việc chuyện gì xảy ra khi nội dung quá lớn để vừa với 1 vùng */
+/* các thuộc tính con của overflow */
+/* visible - mặc định, phần tràn ko cắt, nội dung tràn ra ngoài hộp
+hidden - phần tràn bị cắt, phần ko nhìn thấy ko hiển thị
+scroll - phần tràn bị cắt, và có thêm 1 cái thanh cuộn bên cạnh
+auto - giống scroll nhưng chỉ hiện khi cần */
+
+/* cái này chỉ hoạt động với phần tử có chiều cao cố định */
+/* overflow: visible */
+div {
+    width: 200px;
+    height: 50px;
+    background-color: #eee;
+    overflow: visible;
+}
+
+/* overflow: hidden */
+div {
+    overflow: hidden;
+}
+
+/* overflow: scroll */
+div {
+    overflow: scroll;
+}
+
+/* overflow: auto */
+div {
+    overflow: auto;
+}
+
+/* overflow-x chỉ định những việc cần làm với các cạnh trái / phải của nội dung. 
+overflow-y chỉ định những việc cần làm với các cạnh trên / dưới của nội dung. */
+div {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Add vertical scrollbar */
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* thuộc tính float */
+/* left - The element floats to the left of its container
+right - The element floats to the right of its container
+none - The element does not float (will be displayed just where it occurs in the text). This is default
+inherit - The element inherits the float value of its parent */
+
+/* hình hiển thị bên phải văn bản */
+img {
+    float: right;
+}
+/* hình hiển thị bên trái văn bản */
+img {
+    float: left;
+}
+/* chế độ mặc định */
+img {
+    float: none;
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Thuộc tính clear chỉ định những phần tử nào có thể trôi nổi bên cạnh phần tử đã xóa và ở phía nào. */
+/* none - Allows floating elements on both sides. This is default
+left - No floating elements allowed on the left side
+right- No floating elements allowed on the right side
+both - No floating elements allowed on either the left or the right side
+inherit - The element inherits the clear value of its parent */
+
+/* sử dụng sau khi sử dụng float */
+/* nó cấm float bên cạnh nó */
+
+/* Nếu một phần tử cao hơn phần tử chứa nó và nó được thả nổi, nó sẽ "tràn" ra bên ngoài vùng chứa của nó: */
+/* kiểm soát margin và padding để ko thấy scroll bar */
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/* float example */
+/* nổi với chiều rộng bằng nhau */
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    float: left;
+    width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+    padding: 50px; /* if you want space between the images */
+}
+/* các ảnh đứng cạnh nhau và có khoảng cách */
+.img-container {
+    float: left;
+    width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */
+    padding: 5px; /* if you want space between the images */
+}
+/* nổi với chiều cao bằng nhau */
+/* cái này khá là vô dụng nên sẽ có trong bài flexbox sau */
+.box {
+    height: 500px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* block-inline */
+/* So với display: inline, điểm khác biệt chính là display: inline-block cho phép thiết lập chiều rộng và chiều cao trên phần tử. */
+/* Ngoài ra, với display: inline-block, margin/padding trên cùng và dưới cùng được tôn trọng, nhưng với display: inline thì không. */
+/* So với display: block, sự khác biệt chính là display: inline-block không thêm dấu ngắt dòng sau phần tử, vì vậy phần tử có thể nằm cạnh các phần tử khác. */
+
+/* hiển thị navbar theo chiều ngang thay về chiều dọc */
+.nav {
+    background-color: yellow;
+    list-style-type: none;
+    text-align: center; 
+    padding: 0;
+    margin: 0;
+}
+  
+.nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* dùng margin để căn chỉnh phần tử theo chiều ngang */
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+/* Căn giữa sẽ không có hiệu lực nếu thuộc tính width không được đặt (hoặc được đặt thành 100%). */
+/* Để chỉ căn giữa văn bản bên trong một phần tử, hãy sử dụng text-align: center; */
+.center {
+    text-align: center;
+    border: 3px solid green;
+}
+/* Để căn giữa một hình ảnh, hãy đặt lề trái và phải thành tự động và biến nó thành một phần tử khối: */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+/* Các phần tử có vị trí tuyệt đối bị xóa khỏi luồng thông thường và có thể chồng chéo các phần tử. */
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+/* Một phương pháp khác để căn chỉnh các phần tử là sử dụng thuộc tính float: */
+.right {
+    float: right;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+/* Có nhiều cách để căn giữa một phần tử theo chiều dọc trong CSS. Một giải pháp đơn giản là sử dụng đệm trên và dưới: */
+.center {
+    padding: 70px 0;
+    border: 3px solid green;
+}
+/* Để căn giữa theo cả chiều dọc và chiều ngang, hãy sử dụng padding và text-align: center: */
+.center {
+    padding: 70px 0;
+    border: 3px solid green;
+    text-align: center;
+}
+/* Một mẹo khác là sử dụng thuộc tính line-height với giá trị bằng thuộc tính height: */
+.center {
+    line-height: 200px;
+    height: 200px;
+    border: 3px solid green;
+    text-align: center;
+}
+  
+/* If the text has multiple lines, add the following: */
+.center p {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Nếu padding và line-height không phải là tùy chọn, thì một giải pháp khác là sử dụng định vị và thuộc tính biến đổi: */
+.center {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+}
+  
+.center p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* có thể sử dụng flexbox để căn giữa mọi thứ. */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid green;
+}
+
+
+
